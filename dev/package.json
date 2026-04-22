@@ -1,0 +1,21 @@
+{
+  "name": "claude-plugins-site-dev",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^6.1.8",
+    "claude-plugins-site": "workspace:*"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "typescript": "~6.0.2"
+  }
+}
