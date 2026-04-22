@@ -1,4 +1,4 @@
-import type { ShellTranslation } from 'claude-plugins-site/types'
+import type { ShellTranslation } from 'powers-landing-shell/types'
 import type {
   PlaygroundUaAgent,
   PlaygroundUaSkill,
@@ -25,7 +25,7 @@ export const en = {
     title_a: 'Placeholder',
     title_b: 'hero',
     title_c: 'title copy.',
-    sub: 'This is playground sample data used to develop claude-plugins-site.',
+    sub: 'This is playground sample data used to develop powers-landing-shell.',
     install_label: 'Quick install',
     install_hint: 'Paste into a running Claude Code session.',
     install_done: 'Copied',

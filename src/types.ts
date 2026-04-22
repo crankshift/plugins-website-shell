@@ -27,6 +27,7 @@ export interface SiteConfig<
   Locales extends string = string,
 > {
   brand: string
+  brandSymbol?: string
   tagline?: string
   repo: string
   url: string

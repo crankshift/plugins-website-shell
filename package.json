@@ -1,12 +1,12 @@
 {
-  "name": "claude-plugins-site",
+  "name": "powers-landing-shell",
   "type": "module",
   "version": "0.1.0",
   "description": "Generic Astro shell for Claude Code plugin landing pages (lawpowers, businesspowers, …).",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crankshift/claude-plugins-site.git"
+    "url": "git+https://github.com/crankshift/plugins-website-shell.git"
   },
   "engines": {
     "node": ">=22.12.0"

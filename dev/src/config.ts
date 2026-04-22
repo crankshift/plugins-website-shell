@@ -1,4 +1,4 @@
-import type { SiteConfig } from 'claude-plugins-site/types'
+import type { SiteConfig } from 'powers-landing-shell/types'
 
 export const PLAYGROUND_AGENTS_UA = [
   'claim-drafter',
@@ -33,7 +33,7 @@ export type LocaleCode = (typeof LOCALE_CODES)[number]
 
 export const site: SiteConfig<PluginCode, LocaleCode> = {
   brand: 'playpowers',
-  tagline: 'Playground sample data for claude-plugins-site shell development.',
+  tagline: 'Playground sample data for powers-landing-shell shell development.',
   repo: 'crankshift/playpowers',
   url: 'https://example.test',
   defaultLocale: 'en',

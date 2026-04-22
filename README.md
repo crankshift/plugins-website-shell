@@ -1,4 +1,4 @@
-# claude-plugins-site
+# powers-landing-shell
 
 Generic Astro shell for Claude Code plugin landing pages — used by
 [`lawpowers`](https://github.com/crankshift/lawpowers),
@@ -13,14 +13,14 @@ owns layout, components, SEO, i18n, and design tokens.
 In a consumer repo (e.g. `lawpowers/site/`):
 
 ```bash
-pnpm add claude-plugins-site@file:../../claude-plugins-site
-# or: pnpm add @crankshift/claude-plugins-site (once published to npm)
+pnpm add powers-landing-shell@file:../../powers-landing-shell
+# or: pnpm add @crankshift/powers-landing-shell (once published to npm)
 ```
 
 Create `src/config.ts`:
 
 ```ts
-import type { SiteConfig } from 'claude-plugins-site'
+import type { SiteConfig } from 'powers-landing-shell'
 
 export const site: SiteConfig = {
   brand: 'lawpowers',
@@ -46,7 +46,7 @@ Write `src/pages/[locale]/index.astro`:
 
 ```astro
 ---
-import { PageShell, isLang } from 'claude-plugins-site'
+import { PageShell, isLang } from 'powers-landing-shell'
 import { site } from '../../config'
 import { dicts } from '../../locales'
 
@@ -64,7 +64,7 @@ And `src/pages/index.astro`:
 
 ```astro
 ---
-import { RedirectShell } from 'claude-plugins-site'
+import { RedirectShell } from 'powers-landing-shell'
 import { site } from '../config'
 ---
 <RedirectShell site={site} />
@@ -89,7 +89,7 @@ Slot names: `nav`, `hero`, `plugins`, `install`, `principles`, `sources`,
 
 ```bash
 pnpm install
-pnpm --filter claude-plugins-site-dev dev
+pnpm --filter powers-landing-shell-dev dev
 ```
 
 Opens the playground at `http://localhost:4321/` with sample plugin data.

@@ -15,7 +15,7 @@ const repoUrl = `https://github.com/${site.repo}`
 <nav class="nav">
   <div class="container nav-row">
     <a href={`/${lang}/`} class="brand" aria-label={t.a11y.brand_home}>
-      <BrandMark />
+      {site.brandSymbol ? <BrandMark>{site.brandSymbol}</BrandMark> : <BrandMark />}
       <span class="brand-name">{site.brand}</span>
     </a>
 
