@@ -1,0 +1,43 @@
+---
+import PluginCard from './PluginCard.astro'
+import type { ShellTranslation, SiteConfig } from '../types'
+
+interface Props {
+  t: ShellTranslation
+  site: SiteConfig
+}
+
+const { t, site } = Astro.props
+---
+
+<section class="section" id="plugins">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">{t.plugins.section_eyebrow}</div>
+        <h2>{t.plugins.section_title}</h2>
+      </div>
+      <p>{t.plugins.section_sub}</p>
+    </div>
+    <div class="plugin-grid">
+      {site.plugins.map((plugin) => (
+        <PluginCard t={t} site={site} plugin={plugin} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .plugin-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-auto-rows: auto;
+    align-items: stretch;
+  }
+  @media (max-width: 960px) {
+    .plugin-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
