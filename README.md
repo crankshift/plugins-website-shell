@@ -13,8 +13,7 @@ owns layout, components, SEO, i18n, and design tokens.
 In a consumer repo (e.g. `lawpowers/site/`):
 
 ```bash
-pnpm add powers-landing-shell@file:../../powers-landing-shell
-# or: pnpm add @crankshift/powers-landing-shell (once published to npm)
+pnpm add github:crankshift/powers-landing-shell
 ```
 
 Create `src/config.ts`:
@@ -24,6 +23,7 @@ import type { SiteConfig } from 'powers-landing-shell'
 
 export const site: SiteConfig = {
   brand: 'lawpowers',
+  brandSymbol: '%',            // optional; defaults to '§'
   repo: 'crankshift/lawpowers',
   url: 'https://lawpowers.web.app',
   defaultLocale: 'en',
@@ -84,6 +84,24 @@ import { site } from '../config'
 
 Slot names: `nav`, `hero`, `plugins`, `install`, `principles`, `sources`,
 `disclaimer`, `footer`.
+
+## `brandSymbol`
+
+`SiteConfig.brandSymbol` is an optional string that overrides the default `§`
+symbol rendered by `BrandMark`. When set, the symbol propagates to all four
+locations that display it:
+
+- **Nav** brand mark (top-left)
+- **Footer** brand mark
+- **Disclaimer** warning mark
+- **BaseLayout** favicon (inline SVG)
+
+When `brandSymbol` is omitted the `§` default renders everywhere.
+
+| Consumer | `brandSymbol` | Renders |
+|---|---|---|
+| lawpowers | _(not set)_ | `§` |
+| businesspowers | `'%'` | `%` |
 
 ## Local development
 
