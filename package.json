@@ -1,0 +1,41 @@
+{
+  "name": "claude-plugins-site",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Generic Astro shell for Claude Code plugin landing pages (lawpowers, businesspowers, …).",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crankshift/claude-plugins-site.git"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./i18n": "./src/i18n/index.ts",
+    "./types": "./src/types.ts",
+    "./styles/global.css": "./src/styles/global.css",
+    "./components/*": "./src/components/*",
+    "./layouts/*": "./src/layouts/*"
+  },
+  "peerDependencies": {
+    "astro": "^6.1.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "astro": "^6.1.8",
+    "typescript": "~6.0.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  }
+}
